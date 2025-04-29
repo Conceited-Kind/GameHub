@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "start": "node --experimental-require-module index.js",
+   "start": "concurrently \"npm run dev\" \"npm run server\"",
     "server": "json-server --watch db.json --port 3000",
     "build": "vite build",
     "lint": "eslint .",

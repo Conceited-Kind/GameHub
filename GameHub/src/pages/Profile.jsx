@@ -26,14 +26,15 @@ function Profile() {
         console.log('Profile: Wishlist response:', wishlistResponse.data);
         const wishlistedGameIds = wishlistResponse.data.map(w => w.gameId);
         console.log('Profile: Wishlisted game IDs:', wishlistedGameIds);
+        console.log('Profile: Fetching games from:', `${import.meta.env.VITE_API_URL}/games`);
         const gamesResponse = await axios.get(`${import.meta.env.VITE_API_URL}/games`);
         console.log('Profile: Games response:', gamesResponse.data);
         const wishlistedGames = gamesResponse.data.filter(game => wishlistedGameIds.includes(game.id));
         console.log('Profile: Wishlisted games:', wishlistedGames);
         setUserGames(wishlistedGames);
       } catch (err) {
+        console.error('Profile: Error fetching wishlist:', err.message, err.response?.data);
         setError('Failed to load your wishlist.');
-        console.error('Profile error:', err.message, err.response?.data);
       }
     });
 
@@ -45,8 +46,8 @@ function Profile() {
       await signOut();
       navigate('/auth');
     } catch (error) {
+      console.error('Profile: Sign out error:', error.message);
       setError('Failed to sign out. Please try again.');
-      console.error('Sign out error:', error.message);
     }
   };
 

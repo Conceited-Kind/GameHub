@@ -9,12 +9,13 @@ function GameCard({ game }) {
     const checkWishlist = async () => {
       if (auth.currentUser) {
         try {
-          const response = await axios.get(`${import.meta.env.VITE_API_URL}/wishlists`, {
-            params: { userId: auth.currentUser.uid, gameId: game.id },
-          });
+          const wishlistUrl = `${import.meta.env.VITE_API_URL}/wishlists?userId=${auth.currentUser.uid}&gameId=${game.id}`;
+          console.log('GameCard: Checking wishlist:', wishlistUrl);
+          const response = await axios.get(wishlistUrl);
+          console.log('GameCard: Wishlist response:', response.data);
           setIsWishlisted(response.data.length > 0);
         } catch (error) {
-          console.error('Error checking wishlist:', error.message);
+          console.error('GameCard: Error checking wishlist:', error.message, error.response?.data);
         }
       }
     };
@@ -23,7 +24,7 @@ function GameCard({ game }) {
 
   const handleAddToWishlist = async () => {
     if (!auth.currentUser) {
-      console.log('User not logged in, cannot add to wishlist');
+      console.log('GameCard: User not logged in, cannot add to wishlist');
       return;
     }
     try {
@@ -32,27 +33,29 @@ function GameCard({ game }) {
         gameId: game.id,
         userId: auth.currentUser.uid,
       };
+      console.log('GameCard: Adding to wishlist:', `${import.meta.env.VITE_API_URL}/wishlists`, wishlistItem);
       await axios.post(`${import.meta.env.VITE_API_URL}/wishlists`, wishlistItem);
-      console.log(`Added ${game.title} to wishlist`);
+      console.log(`GameCard: Added ${game.title} to wishlist`);
       setIsWishlisted(true);
     } catch (error) {
-      console.error('Error adding to wishlist:', error.message);
+      console.error('GameCard: Error adding to wishlist:', error.message, error.response?.data);
     }
   };
 
   const handleRemove = async () => {
     try {
-      const response = await axios.get(`${import.meta.env.VITE_API_URL}/wishlists`, {
-        params: { userId: auth.currentUser.uid, gameId: game.id },
-      });
+      const wishlistUrl = `${import.meta.env.VITE_API_URL}/wishlists?userId=${auth.currentUser.uid}&gameId=${game.id}`;
+      console.log('GameCard: Fetching wishlist to remove:', wishlistUrl);
+      const response = await axios.get(wishlistUrl);
       const wishlistId = response.data[0]?.id;
       if (wishlistId) {
+        console.log('GameCard: Removing from wishlist:', `${import.meta.env.VITE_API_URL}/wishlists/${wishlistId}`);
         await axios.delete(`${import.meta.env.VITE_API_URL}/wishlists/${wishlistId}`);
-        console.log(`Removed ${game.title} from wishlist`);
+        console.log(`GameCard: Removed ${game.title} from wishlist`);
         setIsWishlisted(false);
       }
     } catch (error) {
-      console.error('Error removing from wishlist:', error.message);
+      console.error('GameCard: Error removing from wishlist:', error.message, error.response?.data);
     }
   };
 
@@ -64,7 +67,7 @@ function GameCard({ game }) {
           alt={`${game.title} cover`}
           className="w-full h-48 object-cover rounded-lg mb-4"
           loading="lazy"
-          onError={() => console.log(`Failed to load image for ${game.title}`)}
+          onError={() => console.log(`GameCard: Failed to load image for ${game.title}`)}
         />
         <span className="absolute top-2 right-2 bg-accent text-white text-xs font-bold px-2 py-1 rounded-full">
           {game.rating}/5
@@ -110,6 +113,5 @@ function GameCard({ game }) {
     </div>
   );
 }
-
 
 export default GameCard;

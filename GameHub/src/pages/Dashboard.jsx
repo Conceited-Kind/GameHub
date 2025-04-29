@@ -18,13 +18,13 @@ function Dashboard() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // Fetch all games
+        console.log('Dashboard: Fetching games from:', `${import.meta.env.VITE_API_URL}/games`);
         const gamesResponse = await axios.get(`${import.meta.env.VITE_API_URL}/games`);
         const allGames = gamesResponse.data;
+        console.log('Dashboard: Fetched games:', allGames);
         setGames(allGames);
         setFilteredGames(allGames);
 
-        // Fetch recommendations 
         const fetchRecommendations = async () => {
           let attempts = 0;
           const maxAttempts = 5;
@@ -46,10 +46,8 @@ function Dashboard() {
           }
         };
 
-        // Start fetching recommendations
         fetchRecommendations();
 
-        // Detect auth changes
         const unsubscribe = auth.onAuthStateChanged(async (user) => {
           console.log('Dashboard: Auth state changed, User ID:', user?.uid || 'null');
           if (user) {
@@ -62,8 +60,8 @@ function Dashboard() {
 
         return () => unsubscribe();
       } catch (err) {
-        setError('Failed to load games.');
-        console.error('Dashboard error:', err.message);
+        console.error('Dashboard: Error fetching games:', err.message, err.response?.data);
+        setError('Failed to load games. Please try again.');
       } finally {
         setLoading(false);
       }
@@ -94,15 +92,22 @@ function Dashboard() {
     setPlatform('');
     setSort('');
     setFilteredGames([...games]);
-    console.log('Filters reset');
+    console.log('Dashboard: Filters reset');
   };
 
   return (
     <div className="container mx-auto py-8 px-4">
       <h1 className="text-3xl font-bold text-primary mb-6">GameHub Dashboard</h1>
+      {error && (
+        <p className="text-secondary mb-4 text-center" role="alert">
+          {error}
+        </p>
+      )}
       <div className="mb-8">
         <h2 className="text-2xl font-semibold text-primary mb-4">Your Recommendations</h2>
-        {recommendedGames.length > 0 ? (
+        {loading ? (
+          <p className="text-gray-600">Loading recommendations...</p>
+        ) : recommendedGames.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {recommendedGames.map((game) => (
               <GameCard key={game.id} game={game} />
@@ -127,7 +132,9 @@ function Dashboard() {
       />
       <div className="mt-8">
         <h2 className="text-2xl font-semibold text-primary mb-4">All Games</h2>
-        {filteredGames.length > 0 ? (
+        {loading ? (
+          <p className="text-gray-600">Loading games...</p>
+        ) : filteredGames.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredGames.map((game) => (
               <GameCard key={game.id} game={game} />

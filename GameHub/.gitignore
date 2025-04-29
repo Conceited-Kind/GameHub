@@ -28,5 +28,6 @@ GameHub/node_modules
 gamehub-backend/node_modules
 dist/
 .env
+.env.local
 .env.production
 .firebase/

@@ -9,14 +9,15 @@ function DealItem({ deal }) {
     const checkWishlist = async () => {
       if (!auth.currentUser) return;
       try {
-        const response = await axios.get(`${import.meta.env.VITE_API_URL}/wishlists`, {
-          params: { userId: auth.currentUser.uid, gameId: deal.gameId },
-        });
+        const wishlistUrl = `${import.meta.env.VITE_API_URL}/wishlists?userId=${auth.currentUser.uid}&gameId=${deal.gameId}`;
+        console.log('DealItem: Checking wishlist:', wishlistUrl);
+        const response = await axios.get(wishlistUrl);
+        console.log('DealItem: Wishlist response:', response.data);
         if (response.data.length > 0) {
           setWishlisted(true);
         }
       } catch (error) {
-        console.error('Error checking wishlist:', error.message);
+        console.error('DealItem: Error checking wishlist:', error.message, error.response?.data);
       }
     };
     checkWishlist();
@@ -24,25 +25,28 @@ function DealItem({ deal }) {
 
   const handleWishlist = async () => {
     if (!auth.currentUser) {
-      console.log('Please log in to add to wishlist');
+      console.log('DealItem: Please log in to add to wishlist');
       return;
     }
     try {
-      const response = await axios.get(`${import.meta.env.VITE_API_URL}/wishlists`, {
-        params: { userId: auth.currentUser.uid, gameId: deal.gameId },
-      });
+      const wishlistUrl = `${import.meta.env.VITE_API_URL}/wishlists?userId=${auth.currentUser.uid}&gameId=${deal.gameId}`;
+      console.log('DealItem: Checking if already wishlisted:', wishlistUrl);
+      const response = await axios.get(wishlistUrl);
       if (response.data.length > 0) {
         setWishlisted(true);
         return;
       }
-      await axios.post(`${import.meta.env.VITE_API_URL}/wishlists`, {
+      const wishlistItem = {
+        id: `w${Date.now()}`,
         gameId: deal.gameId,
         userId: auth.currentUser.uid,
-      });
+      };
+      console.log('DealItem: Adding to wishlist:', `${import.meta.env.VITE_API_URL}/wishlists`, wishlistItem);
+      await axios.post(`${import.meta.env.VITE_API_URL}/wishlists`, wishlistItem);
       setWishlisted(true);
-      console.log('Added to wishlist:', deal.gameId);
+      console.log('DealItem: Added to wishlist:', deal.gameId);
     } catch (error) {
-      console.error('Error adding to wishlist:', error.message);
+      console.error('DealItem: Error adding to wishlist:', error.message, error.response?.data);
     }
   };
 
