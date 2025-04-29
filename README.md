@@ -1,4 +1,4 @@
-GameHub - Gaming Platform
+## GameHub - Gaming Platform
 
 GameHub is a comprehensive gaming platform that allows users to discover games, read reviews, find deals, and engage with the gaming community.
 
