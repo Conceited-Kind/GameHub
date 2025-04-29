@@ -13,6 +13,7 @@ server.use((req, res, next) => {
   next();
 });
 server.use(router);
+
 server.listen(port, '0.0.0.0', () => {
   console.log(`JSON Server is running on http://0.0.0.0:${port}`);
 });
