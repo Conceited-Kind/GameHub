@@ -1,0 +1,466 @@
+{
+  "games": [
+    {
+      "id": "1",
+      "title": "FC 25",
+      "genre": "Sports",
+      "platform": "PlayStation",
+      "price": 69.99,
+      "rating": 4.7,
+      "tags": [
+        "sports",
+        "multiplayer",
+        "soccer"
+      ],
+      "image": "https://t4.ftcdn.net/jpg/09/21/02/07/240_F_921020702_XKwzBg4udJddLMVP0B74GqIi670LNsfZ.jpg"
+    },
+    {
+      "id": "2",
+      "title": "Forza Horizon 5",
+      "genre": "Racing",
+      "platform": "Xbox",
+      "price": 59.99,
+      "rating": 4.8,
+      "tags": [
+        "racing",
+        "open-world",
+        "multiplayer"
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/en/8/86/Forza_Horizon_5_cover_art.jpg"
+    },
+    {
+      "id": "3",
+      "title": "Call of Duty: Modern Warfare II",
+      "genre": "Action",
+      "platform": "PC",
+      "price": 69.99,
+      "rating": 4.5,
+      "tags": [
+        "shooter",
+        "multiplayer",
+        "action"
+      ],
+      "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1962660/header.jpg?t=1710969334"
+    },
+    {
+      "id": "4",
+      "title": "Roblox",
+      "genre": "Adventure",
+      "platform": "Mobile",
+      "price": 0,
+      "rating": 4.3,
+      "tags": [
+        "multiplayer",
+        "creative",
+        "social"
+      ],
+      "image": "https://t4.ftcdn.net/jpg/04/95/54/69/240_F_495546973_rVR1K9VrZSAjTvCg7tTuSRGdRMH4nfgO.jpg"
+    },
+    {
+      "id": "5",
+      "title": "Need for Speed Heat",
+      "genre": "Racing",
+      "platform": "PlayStation",
+      "price": 49.99,
+      "rating": 4.4,
+      "tags": [
+        "racing",
+        "open-world",
+        "action"
+      ],
+      "image": "https://media.contentapi.ea.com/content/dam/need-for-speed/nfs-heat/common/wallpapers/nsfh-wallpaper-keyart-deluxe-16x9.png"
+    },
+    {
+      "id": "6",
+      "title": "Counter-Strike 2",
+      "genre": "Action",
+      "platform": "PC",
+      "price": 0,
+      "rating": 4.6,
+      "tags": [
+        "shooter",
+        "multiplayer",
+        "competitive"
+      ],
+      "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/10/header.jpg?t=1745368572"
+    },
+    {
+      "id": "7",
+      "title": "Among Us",
+      "genre": "Party",
+      "platform": "Mobile",
+      "price": 0,
+      "rating": 4.2,
+      "tags": [
+        "multiplayer",
+        "social",
+        "strategy"
+      ],
+      "image": "https://i.pinimg.com/474x/e8/79/ff/e879ff6f793fe710c20a598cd291371c.jpg"
+    },
+    {
+      "id": "8",
+      "title": "Minecraft",
+      "genre": "Adventure",
+      "platform": "PC",
+      "price": 29.99,
+      "rating": 4.9,
+      "tags": [
+        "creative",
+        "open-world",
+        "survival"
+      ],
+      "image": "https://i.pinimg.com/236x/5f/f0/e9/5ff0e997a4a8ba449056ed679660f4cc.jpg"
+    },
+    {
+      "id": "9",
+      "title": "League of Legends",
+      "genre": "MOBA",
+      "platform": "PC",
+      "price": 0,
+      "rating": 4.7,
+      "tags": [
+        "multiplayer",
+        "competitive",
+        "strategy"
+      ],
+      "image": "https://i.pinimg.com/236x/a2/ed/11/a2ed11c6731859330fb6c28b6b59facd.jpg"
+    },
+    {
+      "id": "10",
+      "title": "Assassin’s Creed Valhalla",
+      "genre": "Action",
+      "platform": "PlayStation",
+      "price": 59.99,
+      "rating": 4.5,
+      "tags": [
+        "open-world",
+        "adventure",
+        "stealth"
+      ],
+      "image": "https://i.pinimg.com/236x/d4/d7/88/d4d78894f7025b2221298fdcd8d601d6.jpg"
+    },
+    {
+      "id": "11",
+      "title": "Apex Legends",
+      "genre": "Battle Royale",
+      "platform": "PC",
+      "price": 0,
+      "rating": 4.4,
+      "tags": [
+        "shooter",
+        "multiplayer",
+        "battle-royale"
+      ],
+      "image": "https://i.pinimg.com/736x/e4/b1/9a/e4b19a500492b0bc3dcd74ad473ea386.jpg"
+    },
+    {
+      "id": "12",
+      "title": "Shadow of the Tomb Raider",
+      "genre": "Adventure",
+      "platform": "Xbox",
+      "price": 39.99,
+      "rating": 4.3,
+      "tags": [
+        "adventure",
+        "action",
+        "stealth"
+      ],
+      "image": "https://i.pinimg.com/736x/68/7b/34/687b3453dbc4280f1d71356038a8a103.jpg"
+    },
+    {
+      "id": "13",
+      "title": "F1 24",
+      "genre": "Racing",
+      "platform": "PlayStation",
+      "price": 69.99,
+      "rating": 4.6,
+      "tags": [
+        "racing",
+        "sports",
+        "simulation"
+      ],
+      "image": "https://i.pinimg.com/236x/30/24/c4/3024c440e286ed4d04c94996d4fd808d.jpg"
+    },
+    {
+      "id": "14",
+      "title": "WWE 2K25",
+      "genre": "Sports",
+      "platform": "Xbox",
+      "price": 59.99,
+      "rating": 4.2,
+      "tags": [
+        "sports",
+        "fighting",
+        "multiplayer"
+      ],
+      "image": "https://i.pinimg.com/236x/61/6e/2f/616e2fc7f088107802df44c67962a7d0.jpg"
+    },
+    {
+      "id": "15",
+      "title": "The Witcher 3: Wild Hunt",
+      "genre": "RPG",
+      "platform": "PC",
+      "price": 39.99,
+      "rating": 4.9,
+      "tags": [
+        "rpg",
+        "open-world",
+        "adventure"
+      ],
+      "image": "https://i.pinimg.com/236x/cb/5e/e7/cb5ee7c16d0a389f914f958d1171b1ed.jpg"
+    },
+    {
+      "id": "16",
+      "title": "Red Dead Redemption 2",
+      "genre": "Action",
+      "platform": "PlayStation",
+      "price": 59.99,
+      "rating": 4.8,
+      "tags": [
+        "open-world",
+        "adventure",
+        "action"
+      ],
+      "image": "https://i.pinimg.com/236x/7f/6d/48/7f6d48a99cc9352ec7f41f0a970777ee.jpg"
+    },
+    {
+      "id": "17",
+      "title": "Fortnite",
+      "genre": "Battle Royale",
+      "platform": "Mobile",
+      "price": 0,
+      "rating": 4.3,
+      "tags": [
+        "battle-royale",
+        "multiplayer",
+        "shooter"
+      ],
+      "image": "https://i.pinimg.com/236x/c3/c2/a2/c3c2a2242cc7e196f639bd78bc8bacfa.jpg"
+    },
+    {
+      "id": "18",
+      "title": "Elden Ring",
+      "genre": "RPG",
+      "platform": "PC",
+      "price": 59.99,
+      "rating": 4.9,
+      "tags": [
+        "rpg",
+        "open-world",
+        "action"
+      ],
+      "image": "https://i.pinimg.com/736x/a9/c9/57/a9c957ff51e68181240b6dd5578474f0.jpg"
+    },
+    {
+      "id": "19",
+      "title": "GTA V",
+      "genre": "Action",
+      "platform": "Xbox",
+      "price": 29.99,
+      "rating": 4.7,
+      "tags": [
+        "open-world",
+        "action",
+        "multiplayer"
+      ],
+      "image": "https://i.pinimg.com/236x/dc/09/8f/dc098f0532de3c000039bda2b1a4e546.jpg"
+    },
+    {
+      "id": "20",
+      "title": "Rocket League",
+      "genre": "Sports",
+      "platform": "PC",
+      "price": 0,
+      "rating": 4.5,
+      "tags": [
+        "sports",
+        "multiplayer",
+        "racing"
+      ],
+      "image": "https://i.pinimg.com/736x/22/0c/b6/220cb62711c35b6682be0fb5456a6813.jpg"
+    },
+    {
+      "id": "21",
+      "title": "Hollow Knight",
+      "genre": "Adventure",
+      "platform": "PC",
+      "price": 14.99,
+      "rating": 4.8,
+      "tags": [
+        "adventure",
+        "indie",
+        "platformer"
+      ],
+      "image": "https://i.pinimg.com/236x/c9/18/3a/c9183af6cfbfa5861839f008a533daba.jpg"
+    },
+    {
+      "id": "22",
+      "title": "Valorant",
+      "genre": "Action",
+      "platform": "PC",
+      "price": 0,
+      "rating": 4.6,
+      "tags": [
+        "shooter",
+        "multiplayer",
+        "competitive"
+      ],
+      "image": "https://i.pinimg.com/236x/50/2f/a9/502fa9b677c3f500b22630be7d6da04a.jpg"
+    },
+    {
+      "id": "23",
+      "title": "God of War Ragnarök",
+      "genre": "Action",
+      "platform": "PlayStation",
+      "price": 69.99,
+      "rating": 4.9,
+      "tags": [
+        "action",
+        "adventure",
+        "story"
+      ],
+      "image": "https://i.pinimg.com/236x/58/e0/05/58e005528bad04d6b9c506d6e0e68503.jpg"
+    },
+    {
+      "id": "24",
+      "title": "Stardew Valley",
+      "genre": "Simulation",
+      "platform": "Mobile",
+      "price": 4.99,
+      "rating": 4.7,
+      "tags": [
+        "simulation",
+        "indie",
+        "farming"
+      ],
+      "image": "https://i.pinimg.com/236x/10/e8/42/10e84208e2d5092624e65a8bce1b4e9f.jpg"
+    },
+    {
+      "id": "25",
+      "title": "Cyberpunk 2077",
+      "genre": "RPG",
+      "platform": "PC",
+      "price": 59.99,
+      "rating": 4.2,
+      "tags": [
+        "rpg",
+        "open-world",
+        "sci-fi"
+      ],
+      "image": "https://i.pinimg.com/736x/28/9e/ec/289eecc102b1d8d128ed1622d433480b.jpg"
+    },
+    {
+      "id": "26",
+      "title": "Overwatch 2",
+      "genre": "Action",
+      "platform": "Xbox",
+      "price": 0,
+      "rating": 4.3,
+      "tags": [
+        "shooter",
+        "multiplayer",
+        "team-based"
+      ],
+      "image": "https://i.pinimg.com/736x/b7/7e/e2/b77ee23b923b5f67dbd41648aabea520.jpg"
+    },
+    {
+      "id": "27",
+      "title": "Hades",
+      "genre": "Action",
+      "platform": "PC",
+      "price": 24.99,
+      "rating": 4.8,
+      "tags": [
+        "action",
+        "indie",
+        "roguelike"
+      ],
+      "image": "https://i.pinimg.com/236x/b5/5e/b9/b55eb9302c11e6be0b8f53221f59de43.jpg"
+    },
+    {
+      "id": "28",
+      "title": "Horizon Forbidden West",
+      "genre": "Action",
+      "platform": "PlayStation",
+      "price": 59.99,
+      "rating": 4.7,
+      "tags": [
+        "open-world",
+        "adventure",
+        "sci-fi"
+      ],
+      "image": "https://i.pinimg.com/736x/e4/7b/c6/e47bc618d9ea87de1f13106b26327455.jpg"
+    },
+    {
+      "id": "29",
+      "title": "Dota 2",
+      "genre": "MOBA",
+      "platform": "PC",
+      "price": 0,
+      "rating": 4.6,
+      "tags": [
+        "multiplayer",
+        "competitive",
+        "strategy"
+      ],
+      "image": "https://i.pinimg.com/736x/77/cc/84/77cc844b618b38f59e47d7c5fa921762.jpg"
+    },
+    {
+      "id": "30",
+      "title": "Spider-Man: Miles Morales",
+      "genre": "Action",
+      "platform": "PlayStation",
+      "price": 49.99,
+      "rating": 4.8,
+      "tags": [
+        "action",
+        "open-world",
+        "adventure"
+      ],
+      "image": "https://i.pinimg.com/236x/28/9f/65/289f653846a514ebda29903240340e79.jpg"
+    }
+  ],
+  "deals": [
+    {
+      "id": "1",
+      "gameId": 1,
+      "store": "Steam",
+      "discount": 20,
+      "price": 55.99
+    },
+    {
+      "id": "2",
+      "gameId": 10,
+      "store": "Epic Games",
+      "discount": 15,
+      "price": 50.99
+    },
+    {
+      "id": "3",
+      "gameId": 2,
+      "store": "Microsoft Store",
+      "discount": 15,
+      "price": 50.99
+    },
+    {
+      "id": "4",
+      "gameId": 19,
+      "store": "Xbox Store",
+      "discount": 30,
+      "price": 20.99
+    }
+  ],
+  "wishlists": [
+    {
+      "id": "ddee",
+      "gameId": 1,
+      "userId": "w0TUMqLHlahYoLD2l9u88fcs3HE3"
+    },
+    {
+      "id": "w1745784423231",
+      "gameId": "11",
+      "userId": "w0TUMqLHlahYoLD2l9u88fcs3HE3"
+    }
+  ]
+}
